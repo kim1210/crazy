@@ -9,10 +9,11 @@
 
   <ol class="result"></ol>
 
-  <form class = "ajaxForm" method="POST">
+  <!-- <form class = "ajaxForm" method="POST">
       <input type = "submit" class="ajaxsend" value="시험지 저장">
-  </form>
-  <!-- <button class="ajaxsend">전송</button> -->
+  </form> -->
+  <!-- <a class = "ajaxsend" href="http://127.0.0.1:5000/success">전송</a> -->
+  <button class="ajaxsend">전송</button>
 
   <div class = 'result_test'></div>
 </div>
@@ -99,7 +100,7 @@ init();
         const testdata = localStorage.getItem(TESTS_LS);
         if (testdata !== null) {
             console.log(testdata)
-                sendAjax('/success', testdata);
+                sendAjax('http://127.0.0.1:5000/success', testdata);
             };
         });
     
